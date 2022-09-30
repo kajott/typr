@@ -7,7 +7,8 @@ var Config = {
   textColor:0,
   textColorPalette:["#ffffff","#ff3933", "#20b383"],
   textFont:0,
-  textFontList:["KronaOne", "wingdings"],
+  textFontList:["Kanit", "wingdings"],
   isScreenShakeEnabled:true,
-  isPongEnabled:false
+  isPongEnabled:false,
+  letterspacing: 14
 };
