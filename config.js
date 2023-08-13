@@ -10,5 +10,6 @@ var Config = {
   textFontList:["Kanit", "wingdings"],
   isScreenShakeEnabled:true,
   isPongEnabled:false,
-  letterspacing: 14
+  letterSpacingDividerClock: 14,
+  letterSpacingDividerText: 10
 };

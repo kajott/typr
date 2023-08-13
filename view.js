@@ -12,8 +12,6 @@ var View = (starfield, particle) => {
   var MAX_FONT_SIZE = height;
   var currentFontSize = MAX_FONT_SIZE;
 
-  var letterSpacingMulti = 10;
-
   var init = () => {
     ctx = document.createElement('canvas').getContext('2d');
     ctx.canvas.width = width;
@@ -43,7 +41,7 @@ var View = (starfield, particle) => {
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
 
-    ctx.canvas.style.letterSpacing = (-currentFontSize / letterSpacingMulti) + 'px';
+    ctx.canvas.style.letterSpacing = (-currentFontSize / Config.letterSpacingDividerText) + 'px';
   }
 
   // API - get new letter entered
@@ -219,7 +217,7 @@ var View = (starfield, particle) => {
     var longestText = getLongestLine(linesToRender);
 
     //shrink font size by width
-    currentFontSize = currentFontSize / ctx.measureText(longestText).width * (width * (letterSpacingMulti * .1));
+    currentFontSize = currentFontSize / ctx.measureText(longestText).width * width;
     currentFontSize = Math.min(currentFontSize, MAX_FONT_SIZE);
 
     //shrink font size by height
@@ -234,7 +232,7 @@ var View = (starfield, particle) => {
 
     var lineHeight = currentFontSize;
     // optimization against stuttering
-    var letterSpacing = (-currentFontSize / letterSpacingMulti);
+    var letterSpacing = (-currentFontSize / Config.letterSpacingDividerText);
     if(previousLetterSpacing !== letterSpacing){
       ctx.canvas.style.letterSpacing = letterSpacing + 'px';
       ctx.font = currentFontSize + 'px ' + currentFont;
@@ -258,7 +256,7 @@ var View = (starfield, particle) => {
     var longestText = getLongestLine(input);
 
     //shrink font size by width
-    currentFontSize = currentFontSize / ctx.measureText(longestText).width * (width * (letterSpacingMulti*.1));
+    currentFontSize = currentFontSize / ctx.measureText(longestText).width * (width * (Config.letterSpacingDividerText*.1));
     currentFontSize = Math.min(currentFontSize, MAX_FONT_SIZE);
 
     //shrink font size by height
@@ -272,7 +270,7 @@ var View = (starfield, particle) => {
     }
 
     lineHeight = currentFontSize;
-    ctx.canvas.style.letterSpacing = (-currentFontSize / letterSpacingMulti) + 'px';
+    ctx.canvas.style.letterSpacing = (-currentFontSize / Config.letterSpacingDividerText) + 'px';
     ctx.font = currentFontSize + 'px ' + currentFont;
 
     //ctx.canvas.style.letterSpacing = (-currentFontSize / 14) + 'px';

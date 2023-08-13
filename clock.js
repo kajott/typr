@@ -70,7 +70,7 @@ var Clock = () => {
 	}
 
 	function setLetterSpacing(){
-		ctx.canvas.style.letterSpacing = (-currentFontSize / Config.letterspacing) + 'px';
+		ctx.canvas.style.letterSpacing = (-currentFontSize / Config.letterSpacingDividerClock) + 'px';
 	}
 
 	function onResize() {
