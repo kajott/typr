@@ -38,6 +38,15 @@ canvas {
   font-style: normal;
 }
 
+@font-face {
+  font-family:'SpaceGroteskLight';
+  src: url('SpaceGrotesk-Light.ttf');
+  src: local('Space Grotesk Light'),
+  url('SpaceGrotesk-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .logo{
   position:absolute;
   z-index:10;

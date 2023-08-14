@@ -7,10 +7,10 @@ var Config = {
   textColor:0,
   textColorPalette:["#ffffff","#ff3933", "#20b383"],
   textFont:0,
-  textFontList:["Kanit", "wingdings"],
+  textFontList:["SpaceGroteskLight", "wingdings"],
   isScreenShakeEnabled:true,
   isPongEnabled:false,
-  letterSpacingDividerClock: 14,
-  letterSpacingDividerText: 10,
+  letterSpacingDividerClock: 10,
+  letterSpacingDividerText: 8,
   normalWordSpacing:true
 };
