@@ -42,6 +42,9 @@ var View = (starfield, particle) => {
     ctx.textBaseline = "middle";
 
     ctx.canvas.style.letterSpacing = (-currentFontSize / Config.letterSpacingDividerText) + 'px';
+    if (Config.normalWordSpacing) {
+      ctx.canvas.style.wordSpacing = ( currentFontSize / Config.letterSpacingDividerText) + 'px';
+    }
   }
 
   // API - get new letter entered
@@ -235,6 +238,9 @@ var View = (starfield, particle) => {
     var letterSpacing = (-currentFontSize / Config.letterSpacingDividerText);
     if(previousLetterSpacing !== letterSpacing){
       ctx.canvas.style.letterSpacing = letterSpacing + 'px';
+      if (Config.normalWordSpacing) {
+        ctx.canvas.style.wordSpacing = (-letterSpacing) + 'px';
+      }
       ctx.font = currentFontSize + 'px ' + currentFont;
       previousLetterSpacing = letterSpacing;
     }
@@ -271,6 +277,9 @@ var View = (starfield, particle) => {
 
     lineHeight = currentFontSize;
     ctx.canvas.style.letterSpacing = (-currentFontSize / Config.letterSpacingDividerText) + 'px';
+    if (Config.normalWordSpacing) {
+      ctx.canvas.style.wordSpacing = (currentFontSize  / Config.letterSpacingDividerText) + 'px';
+    }
     ctx.font = currentFontSize + 'px ' + currentFont;
 
     //ctx.canvas.style.letterSpacing = (-currentFontSize / 14) + 'px';
