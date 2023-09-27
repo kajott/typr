@@ -62,29 +62,34 @@ let Typr = () => {
       //F4 -- change background
         case 115:
         Config.starfieldSprite = ++Config.starfieldSprite < 3 ? Config.starfieldSprite : 0;
+        event.preventDefault();
         break;
 
       //F6 -- change word replace
         case 117:
         Config.replaceWords = ++Config.replaceWords <= Config.replaceWordsWith.length ? Config.replaceWords : 0;
         _view.onUpdate();
+        event.preventDefault();
         break;
 
       //F7 -- change textcolor
         case 118:
         Config.textColor = ++Config.textColor < Config.textColorPalette.length ? Config.textColor : 0;
         _view.onUpdate();
+        event.preventDefault();
         break;
       
       //F8 -- change font
         case 119:
         Config.textFont = ++Config.textFont < Config.textFontList.length ? Config.textFont : 0;
         _view.onUpdate();
+        event.preventDefault();
         break;
 
       //F9 -- pong
         case 120:
         Config.isPongEnabled = !Config.isPongEnabled;
+        event.preventDefault();
         break;
     }
   }
