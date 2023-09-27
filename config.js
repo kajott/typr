@@ -8,6 +8,7 @@ var Config = {
   textColorPalette:["#ffffff","#f1ff4a","#ff3933", "#20b383"],
   textFont:0,
   textFontList:["SpaceGroteskLight", "wingdings"],
+  starfieldPalette:["#db2128", "#1a5dad", "#e0d9c9"],
   isScreenShakeEnabled:true,
   isPongEnabled:false,
   letterSpacingDividerClock: 10,

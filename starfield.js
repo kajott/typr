@@ -5,7 +5,6 @@ var Starfield = function() {
 	"use strict";
 
 	var PARTICLE_COUNT = 2000,
-		palette = ['#db2128', '#1a5dad', '#e0d9c9'],
 		sprites = [starfieldSprite1, starfieldSprite2, starfieldSprite3],
 		spritesSpecial = [starfieldSprite1special, starfieldSprite2special, starfieldSprite3special, starfieldSprite4special, starfieldSprite5special],
 		maxZ,
@@ -48,10 +47,10 @@ var Starfield = function() {
 			p.z = Random.range(maxZ * .3, maxZ);
 			p.oldX = false;
 			p.oldY = false;
-			p.colorIndex = Math.round(Random.range(0, palette.length));
+			p.colorIndex = Math.round(Random.range(0, Config.starfieldPalette.length));
 			p.spriteIndex = Math.floor(Random.range(0, sprites.length - 1));
 			p.spriteSpecialIndex = Math.floor(Random.range(0, spritesSpecial.length - 1));
-			p.color = palette[p.colorIndex];
+			p.color = Config.starfieldPalette[p.colorIndex];
 			particles.push(p);
 		}
 
@@ -158,10 +157,10 @@ var Starfield = function() {
 
 				p.oldX = false;
 				p.oldY = false;
-				p.colorIndex = Math.round(Random.range(0, palette.length));
+				p.colorIndex = Math.round(Random.range(0, Config.starfieldPalette.length));
 				p.spriteIndex = Math.floor(Random.range(0, sprites.length - 1));
 				p.spriteSpecialIndex = Math.floor(Random.range(0, spritesSpecial.length - 1));
-				p.color = palette[p.colorIndex];
+				p.color = Config.starfieldPalette[p.colorIndex];
 
 				needsSort = true;
 			} else {
