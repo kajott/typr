@@ -47,6 +47,14 @@ canvas {
   font-style: normal;
 }
 
+@font-face {
+  font-family:'Scale VF';
+  src: url('ScaleVF.ttf');
+  src: local('ScaleVF.ttf'),
+  url('ScaleVF.ttf') format('truetype');
+  font-variation-settings: "wdth" 125, "wght" 700;
+}
+
 .logo{
   position:absolute;
   z-index:10;
