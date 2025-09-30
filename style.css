@@ -55,6 +55,23 @@ canvas {
   font-variation-settings: "wdth" 125, "wght" 700;
 }
 
+@font-face {
+  font-family:'Bangers';
+  src: url('Bangers-Regular.ttf');
+  src: local('Bangers-Regular.ttf'),
+  url('Bangers-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'Hubot Sans';
+  src: url('HubotSans-VF.ttf');
+  src: local('HubotSans-VF.ttf'),
+  url('HubotSans-VF.ttf') format('truetype');
+  font-variation-settings: "wdth" 84, "wght" 620;
+}
+
 .logo{
   position:absolute;
   z-index:10;

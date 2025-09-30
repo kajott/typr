@@ -33,7 +33,7 @@ var Clock = () => {
 
 	function render() {
 		ctx.clearRect(0, 0, width, height);
-		ctx.fillStyle = Config.textColorPalette[1];
+		ctx.fillStyle = Config.textColorPalette[Config.clockColor];
 
 		var today = new Date();
 		var h = padZero(today.getHours());
@@ -44,7 +44,7 @@ var Clock = () => {
 		currentFontSize = 181/617*(width*.162); // actually .13
 		
 		var time = `${h}:${m}:${s}`;
-		ctx.font = currentFontSize + 'px ' + Config.textFontList[0];
+		ctx.font = currentFontSize + 'px ' + Config.textFontList[Config.clockFont];
 
 		ctx.textBaseline = "top";
 
