@@ -14,6 +14,6 @@ var Config = {
   isScreenShakeEnabled:true,
   isPongEnabled:false,
   letterSpacingDividerClock: 20,
-  letterSpacingDividerText: 30,
+  letterSpacingDividerText: 50,
   normalWordSpacing:true
 };
