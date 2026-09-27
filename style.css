@@ -72,6 +72,23 @@ canvas {
   font-variation-settings: "wdth" 84, "wght" 620;
 }
 
+@font-face {
+  font-family:'Josefin Sans';
+  src: url('JosefinSans-VariableFont_wght.ttf');
+  src: local('JosefinSans-VariableFont_wght.ttf'),
+  url('JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-variation-settings: "wght" 600;
+}
+
+@font-face {
+  font-family:'Thirsty Rough';
+  src: url('Thirsty Rough Blk Two Regular.ttf');
+  src: local('Thirsty Rough Blk Two Regular.ttf'),
+  url('Thirsty Rough Blk Two Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .logo{
   position:absolute;
   z-index:10;
